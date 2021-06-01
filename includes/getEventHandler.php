@@ -12,7 +12,7 @@ $json_obj = json_decode($json_str, true);
 $user_id = $json_obj['user_id'];
 
 
-$sql = "SELECT * FROM events WHERE `user_id`=$user_id ORDER BY `time` ASC";
+$sql = "SELECT title,date FROM quiz";
 $result = mysqli_query($mysqliConn,$sql);
 if($result){
     $events = mysqli_fetch_all($result, MYSQLI_ASSOC);
